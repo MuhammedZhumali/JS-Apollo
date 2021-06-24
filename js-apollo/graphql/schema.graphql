@@ -1,0 +1,31 @@
+type Query {
+  users: [User!]!
+  user(id: Int!): User
+  posts: [Post!]!
+  post(id: Int!): Post
+  postsWhereAuthorId(id: Int!): [Post]!
+}
+
+type Mutation {
+  createUser(first_name: String!, avatar: String!): User
+  deleteUser(id: Int!): User
+  updateUser(id: Int!, first_name: String!, avatar: String!): User
+
+  createPost(title: String!, content: String!, authorId: Int!): Post
+  updatePost(id: Int!,title: String!, content: String!, authorId: Int!): Post
+  deletePost(id: Int!): Post
+}
+
+type User {
+  id: Int!
+  first_name: String!,
+  avatar: String!,
+  posts: [Post]
+}
+
+type Post {
+  id: Int!,
+  title: String!,
+  content: String!,
+  authorId: Int!
+}
