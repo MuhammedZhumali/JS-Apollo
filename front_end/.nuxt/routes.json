@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Users-Create",
+    "path": "/Users/Create",
+    "component": "C:\\\\Users\\\\Construction Plant\\\\Desktop\\\\STEP\\\\vue-apollo\\\\front_end\\\\pages\\\\Users\\\\Create.vue",
+    "chunkName": "pages/Users/Create",
+    "_name": "_56b7eab6"
+  },
+  {
+    "name": "Posts-Create-id",
+    "path": "/Posts/Create/:id?",
+    "component": "C:\\\\Users\\\\Construction Plant\\\\Desktop\\\\STEP\\\\vue-apollo\\\\front_end\\\\pages\\\\Posts\\\\Create\\\\_id.vue",
+    "chunkName": "pages/Posts/Create/_id",
+    "_name": "_590c2fee"
+  },
+  {
+    "name": "Posts-Update-id",
+    "path": "/Posts/Update/:id?",
+    "component": "C:\\\\Users\\\\Construction Plant\\\\Desktop\\\\STEP\\\\vue-apollo\\\\front_end\\\\pages\\\\Posts\\\\Update\\\\_id.vue",
+    "chunkName": "pages/Posts/Update/_id",
+    "_name": "_72a8c6dc"
+  },
+  {
+    "name": "Users-Update-id",
+    "path": "/Users/Update/:id?",
+    "component": "C:\\\\Users\\\\Construction Plant\\\\Desktop\\\\STEP\\\\vue-apollo\\\\front_end\\\\pages\\\\Users\\\\Update\\\\_id.vue",
+    "chunkName": "pages/Users/Update/_id",
+    "_name": "_010a7572"
+  },
+  {
+    "name": "Posts-id",
+    "path": "/Posts/:id?",
+    "component": "C:\\\\Users\\\\Construction Plant\\\\Desktop\\\\STEP\\\\vue-apollo\\\\front_end\\\\pages\\\\Posts\\\\_id.vue",
+    "chunkName": "pages/Posts/_id",
+    "_name": "_ca8417b6"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Construction Plant\\\\Desktop\\\\STEP\\\\vue-apollo\\\\front_end\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_27cc4804"
+  }
+]

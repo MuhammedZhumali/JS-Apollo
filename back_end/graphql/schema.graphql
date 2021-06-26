@@ -1,0 +1,97 @@
+directive @constraint(
+    # String constraints
+    minLength: Int
+    maxLength: Int
+    startsWith: String
+    endsWith: String
+    notContains: String
+    pattern: String
+    format: String
+
+    # Number constraints
+    min: Int
+    max: Int
+    exclusiveMin: Int
+    exclusiveMax: Int
+    multipleOf: Int
+  ) on INPUT_FIELD_DEFINITION
+
+input IntFilter{
+  gt: Int
+  gte: Int
+  lt: Int
+  lte: Int
+  in: Int
+  equals: Int
+  not: Int
+  notIn: Int
+}
+input StringFilter{
+  in: String
+  contains: String
+  not: String
+  notIn: String
+  equals: String
+}
+
+enum Sort {
+  asc
+  desc
+}
+
+type Query {
+  users(filter: UserFilter, skip: Int, take: Int, orderBy: UserOrderByInput, where:String): [User!]
+  user(id: Int!): User
+  posts: [Post!]
+  post(id: Int!): Post
+}
+
+type Mutation {
+  createUser(input: UserInput): User
+  updateUser(id: Int!, input: UserInput): User
+  deleteUser(id: Int!): User
+  createPost(input: PostInput): Post
+  updatePost(id: Int!,input: PostInput): Post
+  deletePost(id: Int!): Post
+}
+
+
+type User {
+  id: Int!
+  first_name: String!
+  age:Int!
+  avatar: String!
+  posts: [Post!]
+}
+
+input UserInput {
+  first_name: String! @constraint(pattern: "^[a-zA-Z]*$", minLength: 3, maxLength: 20)
+  age:Int!
+  avatar: String! 
+  posts: [PostInput]
+}
+
+input UserFilter {
+  first_name: StringFilter
+  age: IntFilter
+  AND: [UserFilter]
+  OR: [UserFilter]
+}
+
+input UserOrderByInput {
+  first_name: Sort
+  age: Sort
+}
+
+type Post {
+  id: Int!
+  title: String!
+  content: String!
+  authorId: Int!
+}
+
+input PostInput {
+  title: String! @constraint(minLength: 3, maxLength: 30)
+  content: String! @constraint(minLength: 5)
+  authorId: Int!
+}
